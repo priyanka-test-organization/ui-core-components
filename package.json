@@ -1,0 +1,28 @@
+{
+  "name": "ui-core-components",
+  "version": "1.0.0",
+  "description": "UI Core Components",
+  "main":"./dist/cjs/index.js",
+  "module":"./dist/esm/index.js",
+  "types":"./dist/esm/index.d.ts",
+  "scripts" : {
+    "build": "npm run build:esm && npm run build:cjs && webpack",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "start": "webpack serve --open"
+  },
+  "author":"",
+  "license":"ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "ts-loader": "^9.4.2",
+    "webpack": "^5.79.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
