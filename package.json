@@ -1,5 +1,5 @@
 {
-  "name": "ui-core-components",
+  "name": "@priyanka-test-organization/ui-core-components",
   "version": "1.0.0",
   "description": "UI Core Components",
   "main":"./dist/cjs/index.js",
@@ -9,7 +9,8 @@
     "build": "npm run build:esm && npm run build:cjs && webpack",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "test":"exit 0"
   },
   "author":"",
   "license":"ISC",
@@ -18,6 +19,11 @@
     "react-dom": "^18.2.0",
     "typescript": "^5.0.4"
   },
+  "publishConfig": {
+    "@priyanka-test-organization/ui-core-components": {
+      "registry": "https://npm.pkg.github.com/"
+    }
+  },  
   "devDependencies": {
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
